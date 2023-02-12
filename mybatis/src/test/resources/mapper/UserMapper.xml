@@ -1,0 +1,12 @@
+<mapper namespace="com.fun90.learning.mybatis.test.UserMapper">
+    <!--根据条件查询单个-->
+    <select id="selectOne" resultType="com.fun90.learning.mybatis.test.User"
+            parameterType="com.fun90.learning.mybatis.test.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+
+    <!--查询所有-->
+    <select id="selectList" resultType="com.fun90.learning.mybatis.test.User">
+        select * from user
+    </select>
+</mapper>
